@@ -4,6 +4,7 @@ $(document).ready(function(){
     arrows: true
   });
   openTextBox();
+  mixpanel.track("Video play");
 });
 
 function openTextBox() {
