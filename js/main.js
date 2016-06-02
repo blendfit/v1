@@ -22,7 +22,7 @@ function pageView() {
 }
 
 function textButtonClick() {
-  $("number").on("click", function() {
+  $(".number").on("click", function() {
     mixpanel.track("Clicked Text Button");
   });
 }
