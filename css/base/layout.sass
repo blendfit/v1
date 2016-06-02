@@ -56,10 +56,19 @@ body
   box-shadow:         0 0 1px 0 #616668
 
 .menu-image
-  position: relative
-  width: 75%
+  position: relative !important
+  width: 70%
   display: block
   @extend .margin-auto
+  @media (min-width: 414px)
+    width: 65%
+  @media (max-width: 330px)
+    width: 82%
+  
+.slick-dots
+  bottom: -50px !important
+  @media (max-width: 330px)
+    bottom: -60px !important
 
 .slick-dots li.slick-active button:before
   opacity: .75
