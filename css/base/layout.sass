@@ -54,11 +54,16 @@ body
   -webkit-box-shadow: 0 0 1px 0 #616668
   -moz-box-shadow:    0 0 1px 0 #616668
   box-shadow:         0 0 1px 0 #616668
-  .menu-image
-    width: 75%
-    display: block
-    @extend .margin-auto
 
+.menu-image
+  width: 75%
+  display: block
+  @extend .margin-auto
+
+.slick-dots li.slick-active button:before
+  opacity: .75
+  color: #3EC9A7 !important
+    
 .number
   width: 91.47%
   height: 65px
@@ -78,6 +83,9 @@ body
   display: block
   @extend .margin-auto
 
+.footer-container
+  margin-bottom: 3.2rem
+  
 .footer-text
   font-size: 1.422rem
   text-align: center
@@ -87,3 +95,12 @@ body
     padding-bottom: .8rem
   .3
     padding: .8rem 0 3.2rem 0
+
+.slick-prev:before, .slick-next:before
+  color: #3EC9A7 !important
+
+.slick-prev
+  left: 8px !important
+  
+.slick-next
+  right: 8px !important
