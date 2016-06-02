@@ -60,10 +60,12 @@ body
   width: 70%
   display: block
   @extend .margin-auto
-  @media (min-width: 414px)
+  @media (min-width: 380px)
     width: 65%
   @media (max-width: 330px)
     width: 82%
+  @media (min-width: 410px)
+    width: 60%
   
 .slick-dots
   bottom: -50px !important
@@ -116,3 +118,18 @@ body
   
 .slick-next
   right: 8px !important
+  
+.payment-instructions
+  font-size: 1.422rem
+  text-align: center
+  color: #616668
+  line-height: 2rem
+  width: 49.6%
+  margin-bottom: 1.6rem
+  @extend .margin-auto
+
+.square-image
+  width: 65%
+  display: block
+  margin-bottom: 3.2rem
+  @extend .margin-auto
