@@ -8,6 +8,8 @@ body
   width: 45%
   display: block
   margin: 3.2rem auto 3.2rem auto
+  @media (min-width: 415px)
+    max-width: 220px
 
 .nysc
   font-size: 1.422rem
@@ -16,6 +18,8 @@ body
   line-height: 2rem
   margin: 0 auto 3.2rem auto
   color: #616668
+  @media (min-width: 415px)
+    font-size: 1.895rem
   span
     color: red
     font-family: $proxima-bold
@@ -24,6 +28,7 @@ body
   border-bottom: 1px solid #D8D8D8
   width: 35%
   @extend .margin-auto
+  max-width: 200px
 
 .header-text
   font-size: 1.895rem
@@ -32,6 +37,7 @@ body
   line-height: 2.653rem
   margin: 3.2rem auto 1.6rem auto
   color: #616668
+  max-width: 320px
 
 .header-subtext
   font-size: 1.422rem
@@ -40,6 +46,7 @@ body
   line-height: 2rem
   margin: 0 auto 3.2rem auto
   color: #616668
+  max-width: 320px
 
 .menu-header
   width: 45.87%
@@ -47,6 +54,7 @@ body
   text-align: center
   margin: 3.2rem auto 1.6rem auto
   color: #616668
+  max-width: 320px
 
 .menu-subheader
   width: 47%
@@ -57,7 +65,8 @@ body
 
 .menu-container
   width: 91.47%
-  height: 468px
+  @media (min-width: 410px)
+    max-width: 379px
   @media (max-width: 330px)
     height: 420px
   @extend .margin-auto
@@ -79,6 +88,7 @@ body
     width: 88%
   @media (min-width: 410px)
     width: 80%
+    max-width: 340px
   
 .slick-dots
   bottom: -40px !important
@@ -99,6 +109,7 @@ body
   margin: 3.2rem auto 3.2rem auto
   background-color: #3EC9A7
   box-shadow: 0 0.15rem 0.05rem #2E947B
+  max-width: 379px
   a
     text-decoration: none
     color: #FFF
@@ -146,3 +157,4 @@ body
   display: block
   margin-bottom: 3.2rem
   @extend .margin-auto
+  max-width: 379px
