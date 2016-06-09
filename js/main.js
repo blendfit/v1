@@ -15,8 +15,8 @@ $(document).ready(function(){
 
 function changeCallButton(button) {
   var text = $(button).data().optionText;
-  var $button = $(".order-button").children();
-  $button.attr('href', "sms:1-347-583-1054?body=" + text);
+  var $button = $(".order-button").find("a");
+  $button.attr('href', "sms:1-347-583-1054&body=" + text);
   $button.text(text.toUpperCase());
 }
 
