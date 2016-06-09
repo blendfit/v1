@@ -38,8 +38,8 @@ function changeCallButton(button) {
   $button.text(text.toUpperCase());
 }
 
-function deselectButton() {
-  $(".price-button.selected").removeClass("selected");
+function deselectButton(button) {
+  $(button).parent().parent().children().find('.selected').removeClass("selected");
 }
 
 function selectButton(button) {
@@ -49,7 +49,7 @@ function selectButton(button) {
 function sizeButtonClick() {
   $(".price-button").on("click", function() {
     if ( $(this).attr("class") !== "price-button selected" ) {
-      deselectButton();
+      deselectButton(this);
       selectButton(this);
       changeCallButton(this);
     }
