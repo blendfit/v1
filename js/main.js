@@ -1,7 +1,9 @@
 $(document).ready(function(){
-  $(".slider").slick({
+  $(".center").slick({
+    centerMode: true,
+    centerPadding: '50px',
     dots: true,
-    arrows: true
+    arrows: false
   });
   openTextBox();
   // Mixpanel Events
