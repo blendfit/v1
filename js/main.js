@@ -28,13 +28,13 @@ function hrefText() {
 }
 
 function changeOrderHref() {
-  $(".order-button").find("a").attr('href', hrefText() + "ORDER SMALL SHREDDER");
+  $(".order-button").find("a").attr('href', hrefText() + encodeURI("Order Small Shredder") );
 }
 
 function changeCallButton(button) {
   var text = $(button).data().optionText;
   var $button = $(".order-button").find("a");
-  $button.attr('href', hrefText() + text);
+  $button.attr('href', hrefText() + encodeURI(text) );
   $button.text(text.toUpperCase());
 }
 
