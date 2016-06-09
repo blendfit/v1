@@ -59,7 +59,7 @@ body
   width: 45.87%
   font-size: 1.895rem
   text-align: center
-  margin: 3.2rem auto 1.6rem auto
+  margin: 3.2rem auto 2.5px auto
   color: #616668
   max-width: 320px
 
@@ -69,6 +69,7 @@ body
   text-align: center
   margin: 0 auto 1.6rem auto
   color: #616668
+  font-family: $proxima-light-italic
 
 .menu-container
   width: 91.47%
@@ -80,9 +81,9 @@ body
   padding: 1.6rem 0 3.2rem 0
   border-radius: 0.5rem
   background: #FFF
-  -webkit-box-shadow: 0 0 1px 0 #616668
-  -moz-box-shadow:    0 0 1px 0 #616668
-  box-shadow:         0 0 1px 0 #616668
+  // -webkit-box-shadow: 0 0 1px 0 #616668
+  // -moz-box-shadow:    0 0 1px 0 #616668
+  // box-shadow:         0 0 1px 0 #616668
 
 .menu-image
   position: relative !important
@@ -90,9 +91,9 @@ body
   margin: 0 auto
   display: block
   max-width: 700px
-  -webkit-box-shadow: 0 0 1px #ccc
-  -moz-box-shadow: 0 0 1px #ccc
-  box-shadow: 0 0 1px #ccc
+  // -webkit-box-shadow: 0 0 1px #ccc
+  // -moz-box-shadow: 0 0 1px #ccc
+  // box-shadow: 0 0 1px #ccc
   // @media (min-width: 380px)
   //   width: 85%
   // @media (max-width: 330px)
@@ -117,7 +118,7 @@ body
   font-size: 1.895rem
   line-height: 65px
   text-align: center
-  margin: 3.2rem auto 3.2rem auto
+  margin: 0 auto
   background-color: #3EC9A7
   box-shadow: 0 0.15rem 0.05rem #2E947B
   max-width: 379px
@@ -170,30 +171,77 @@ body
   @extend .margin-auto
   max-width: 379px
 
-
 .item
+  width: 91.47%
+  @media (min-width: 410px)
+    max-width: 379px
+  @media (max-width: 330px)
+    height: 420px
+  @extend .margin-auto
+  border-radius: 0.5rem
+  background: #FFF
   text-align: center
+  font-size: 14px
+  color: #616668 
+  -webkit-box-shadow: 0 0 1px 0 #616668
+  -moz-box-shadow:    0 0 1px 0 #616668
+  box-shadow:         0 0 1px 0 #616668
 
 .menu-top
    justify-content: center
    display: inline-flex
    text-align: left
+   align-items: center
+   margin-bottom: 16px
 
 .item-image
   width: 50%
   height: 50%
 
-.choice
-  display: inline-block
-  padding: 5px
+.choices
+  width: 100%
+  display: inline-flex
+  justify-content: space-around
 
 .price-button
   background-color: #D8D8D8
-  padding: 20px
+  width: 87px
+  height: 50px
   border: 0
   border-radius: 5px
   box-shadow: 0 0.15rem 0.05rem #616668
+  font-size: 14px
+  font-family: $proxima-bold
 
 .price-button.selected
   background-color: #3EC9A7
   box-shadow: none
+
+.item-title
+  font-family: $proxima-bold
+  letter-spacing: 0.5px
+  margin: 16px 0 2.5px 0
+  
+.item-subtitle
+  font-family: $proxima-light-italic
+  margin-top: 0
+  margin-bottom: 16px
+
+.ingredients li
+  padding: 5px 0 5px 0
+
+.select-size
+  font-family: $proxima-bold
+  letter-spacing: 0.5px
+  margin-bottom: 16px
+
+.price-button-amount
+  color: #FFF
+  display: block
+
+.price-button-size
+  display: block
+  margin-bottom: 2px
+
+.items
+  margin-bottom: 64px !important

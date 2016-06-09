@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".center").slick({
+  $(".items").slick({
     centerMode: true,
     centerPadding: '50px',
     dots: true,
