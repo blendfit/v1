@@ -5,6 +5,9 @@ $(document).ready(function(){
     dots: true,
     arrows: false
   });
+
+  changeOrderHref();
+
   openTextBox();
   // Mixpanel Events
   pageView();
@@ -13,10 +16,25 @@ $(document).ready(function(){
   sizeButtonClick();
 });
 
+function hrefText() {
+  var agent = navigator.userAgent.toLowerCase();
+  if ( agent.search('iphone') > 0 ) {
+    // if iPhone
+    return "sms:1-347-583-1054&body="
+  } else {
+    // if Android
+    return "sms:1-347-583-1054?body="
+  }
+}
+
+function changeOrderHref() {
+  $(".order-button").find("a").attr('href', hrefText() + "ORDER SMALL SHREDDER");
+}
+
 function changeCallButton(button) {
   var text = $(button).data().optionText;
   var $button = $(".order-button").find("a");
-  $button.attr('href', "sms:1-347-583-1054&body=" + text);
+  $button.attr('href', hrefText() + text);
   $button.text(text.toUpperCase());
 }
 
