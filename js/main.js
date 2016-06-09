@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".items").slick({
     centerMode: true,
-    centerPadding: '50px',
+    centerPadding: '30px',
     dots: true,
     arrows: false
   });
