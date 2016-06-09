@@ -8,11 +8,38 @@ $(document).ready(function(){
   openTextBox();
   // Mixpanel Events
   pageView();
-  textButtonClick()
+  textButtonClick();
+
+  sizeButtonClick();
 });
 
+function changeCallButton(button) {
+  var text = $(button).data().optionText;
+  var $button = $(".order-button").children();
+  $button.attr('href', "sms:1-347-583-1054?body=" + text);
+  $button.text(text.toUpperCase());
+}
+
+function deselectButton() {
+  $(".price-button.selected").removeClass("selected");
+}
+
+function selectButton(button) {
+  $(button).addClass("selected");
+}
+
+function sizeButtonClick() {
+  $(".price-button").on("click", function() {
+    if ( $(this).attr("class") !== "price-button selected" ) {
+      deselectButton();
+      selectButton(this);
+      changeCallButton(this);
+    }
+  });
+}
+
 function openTextBox() {
-  $(".number").click(function(){
+  $(".order-button").click(function(){
     window.location = $(this).find("a").attr("href");
     return false;
   });
@@ -24,7 +51,7 @@ function pageView() {
 }
 
 function textButtonClick() {
-  $(".number").on("click", function() {
+  $(".order-button").on("click", function() {
     mixpanel.track("Clicked Text Button");
   });
 }
