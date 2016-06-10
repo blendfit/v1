@@ -14,6 +14,7 @@ $(document).ready(function(){
   textButtonClick();
 
   sizeButtonClick();
+  resetCurrentSelectedSize();
 });
 
 function hrefText() {
@@ -36,7 +37,6 @@ function changeOrderButton(button) {
   var $button = $(".order-button").find("a");
   $button.attr('href', hrefText() + encodeURI(text) );
   $button.text(text.toUpperCase());
-
   // shake button
   animateButton($button.parent());
   // scroll to order button
@@ -69,6 +69,13 @@ function sizeButtonClick() {
       selectButton(this);
       changeOrderButton(this);
     }
+  });
+}
+
+function resetCurrentSelectedSize() {
+  $('.items').on('swipe', function(event, slick, direction) {
+    $button = $(this).find('.slick-current').find('.selected')
+    changeOrderButton($button);
   });
 }
 
