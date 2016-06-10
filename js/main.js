@@ -36,6 +36,16 @@ function changeOrderButton(button) {
   var $button = $(".order-button").find("a");
   $button.attr('href', hrefText() + encodeURI(text) );
   $button.text(text.toUpperCase());
+
+  // shake button
+  animateButton($button.parent());
+}
+
+function animateButton($button) {
+  $button.removeClass('animated shake');
+  window.setTimeout(function() {
+    $button.addClass('animated shake');
+  }, 0);
 }
 
 function deselectButton(button) {
