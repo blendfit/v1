@@ -11,7 +11,7 @@ $(document).ready(function(){
   openTextBox();
   // Mixpanel Events
   pageView();
-  textButtonClick();
+  orderButton();
 
   sizeButtonClick();
   resetCurrentSelectedSize();
@@ -60,6 +60,7 @@ function deselectButton(button) {
 
 function selectButton(button) {
   $(button).addClass("selected");
+  mixpanel.track("Clicked Size Button");
 }
 
 function sizeButtonClick() {
@@ -91,8 +92,8 @@ function pageView() {
   mixpanel.track("Page Viewed");
 }
 
-function textButtonClick() {
+function orderButton() {
   $(".order-button").on("click", function() {
-    mixpanel.track("Clicked Text Button");
+    mixpanel.track("Clicked Order Button");
   });
 }
