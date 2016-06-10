@@ -31,7 +31,7 @@ function changeOrderHref() {
   $(".order-button").find("a").attr('href', hrefText() + encodeURI("Order Small Shredder") );
 }
 
-function changeCallButton(button) {
+function changeOrderButton(button) {
   var text = $(button).data().optionText;
   var $button = $(".order-button").find("a");
   $button.attr('href', hrefText() + encodeURI(text) );
@@ -51,7 +51,7 @@ function sizeButtonClick() {
     if ( $(this).attr("class") !== "price-button selected" ) {
       deselectButton(this);
       selectButton(this);
-      changeCallButton(this);
+      changeOrderButton(this);
     }
   });
 }
