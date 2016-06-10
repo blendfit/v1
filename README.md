@@ -22,11 +22,11 @@ $ npm install
 #### 3. Compile Sass:
 
 ```
-$ grunt sass
+$ gulp sass
 ```
 
 ######To turn on the Grunt Sass watcher:
 
 ```
-$ grunt sass:watch
+$ gulp sass:watch
 ```
