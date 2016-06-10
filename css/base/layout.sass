@@ -104,8 +104,8 @@ body
 
 .slick-dots
   bottom: -35px !important
-  @media (max-width: 330px)
-    bottom: -60px !important
+  @media (max-width: 374px)
+    bottom: -30px !important
 
 .slick-dots li.slick-active button:before
   opacity: .75
@@ -130,6 +130,9 @@ body
     color: #FFF
   a:visited
     color: inherit
+  @media (max-width: 374px)
+    width: 75%
+    font-size: 15px
 
 .square-logo
   display: block
@@ -192,9 +195,12 @@ body
   -webkit-box-shadow: 0 0 1px 0 #616668
   -moz-box-shadow:    0 0 1px 0 #616668
   box-shadow:         0 0 1px 0 #616668
+  
+.item-image
+  @media (max-width: 374px)
+    width: 100px
 
 .menu-top
-   justify-content: center
    display: inline-flex
    text-align: left
    align-items: center
@@ -214,6 +220,10 @@ body
   box-shadow: 0 0.15rem 0.05rem #616668
   font-size: 14px
   font-family: $proxima-bold
+  @media (max-width: 374px)
+    width: 68px
+    height: 31px
+    font-size: 12px
 
 .price-button.selected
   background-color: #3EC9A7
@@ -223,12 +233,20 @@ body
   font-family: $proxima-bold
   letter-spacing: 0.5px
   margin: 16px 0 2.5px 0
+  @media (max-width: 374px)
+    font-size: 14px
 
 .item-subtitle
   font-family: $proxima-light-italic
   margin-top: 0
   margin-bottom: 16px
+  @media (max-width: 374px)
+    font-size: 12px
 
+.ingredients
+  @media (max-width: 374px)
+    font-size: 12px
+    
 .ingredients li
   padding: 5px 0 5px 0
 
@@ -236,6 +254,8 @@ body
   font-family: $proxima-bold
   letter-spacing: 0.5px
   margin-bottom: 16px
+  @media (max-width: 374px)
+    font-size: 14px
 
 .price-button-amount
   color: #FFF
@@ -256,6 +276,8 @@ body
 
 .nutritional-facts p
   font-size: 14px
+  @media (max-width: 374px)
+    font-size: 12px
 
 *:focus
   outline: none
