@@ -39,6 +39,12 @@ function changeOrderButton(button) {
 
   // shake button
   animateButton($button.parent());
+  // scroll to order button
+  scrollToOrderButton();
+}
+
+function scrollToOrderButton() {
+  $(window).scrollTo('.items', {duration: 500});
 }
 
 function animateButton($button) {
