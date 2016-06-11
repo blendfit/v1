@@ -97,7 +97,6 @@ function pageView() {
 
 function orderButton() {
   $(".order-button").on("click", function() {
-    debugger;
     mixpanel.track(
       "Order Shake",
       {
