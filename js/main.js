@@ -94,8 +94,6 @@ function pageView() {
   mixpanel.time_event("Order Shake");
 }
 
-// need to send session and shake size attribute
-
 function orderButton() {
   $(".order-button").on("click", function() {
     mixpanel.track(
