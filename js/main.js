@@ -1,4 +1,4 @@
-$(document).ready(function(){
+  $(document).ready(function(){
   $(".items").slick({
     centerMode: true,
     centerPadding: '30px',
@@ -16,6 +16,7 @@ $(document).ready(function(){
   sizeButtonClick();
   resetCurrentSelectedSize();
 });
+var orderProps;
 
 function hrefText() {
   var agent = navigator.userAgent.toLowerCase();
@@ -60,11 +61,11 @@ function deselectButton(button) {
 
 function selectButton(button) {
   $(button).addClass("selected");
-  mixpanel.track("Clicked Size Button");
 }
 
 function sizeButtonClick() {
   $(".price-button").on("click", function() {
+    orderProps = orderProps($(this));
     if ( $(this).attr("class") !== "price-button selected" ) {
       deselectButton(this);
       selectButton(this);
@@ -89,11 +90,30 @@ function openTextBox() {
 
 // Mixpanel Events
 function pageView() {
-  mixpanel.track("Page Viewed");
+  mixpanel.time_event("Page Landing");
 }
+
+// need to send session and shake size attribute
 
 function orderButton() {
   $(".order-button").on("click", function() {
-    mixpanel.track("Clicked Order Button");
+    debugger;
+    mixpanel.track(
+      "Order Shake",
+      {
+        "Size" : orderProps.size,
+        "Price" : orderProps.price
+      }
+    );
   });
+}
+
+function orderProps(props) {
+  var size = props.find(".price-button-size").text();
+  var price = props.find(".price-button-amount").text();
+  var props = {
+    size: size,
+    price: price
+  };
+  return props;
 }
