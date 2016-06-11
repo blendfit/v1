@@ -90,7 +90,8 @@ function openTextBox() {
 
 // Mixpanel Events
 function pageView() {
-  mixpanel.time_event("Page Landing");
+  mixpanel.track("Page View")
+  mixpanel.time_event("Order Shake");
 }
 
 // need to send session and shake size attribute
