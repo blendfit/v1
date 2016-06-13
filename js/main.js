@@ -16,7 +16,6 @@
   sizeButtonClick();
   resetCurrentSelectedSize();
 });
-var orderProps;
 
 function hrefText() {
   var agent = navigator.userAgent.toLowerCase();
@@ -63,15 +62,27 @@ function selectButton(button) {
   $(button).addClass("selected");
 }
 
+var orderProps;
+
 function sizeButtonClick() {
   $(".price-button").on("click", function() {
-    orderProps = orderProps($(this));
+    orderProps = orderPropsMixpanel($(this));
     if ( $(this).attr("class") !== "price-button selected" ) {
       deselectButton(this);
       selectButton(this);
       changeOrderButton(this);
     }
   });
+}
+
+function orderPropsMixpanel(props) {
+  var size = props.find(".price-button-size").text();
+  var price = props.find(".price-button-amount").text();
+  var props = {
+    size: size,
+    price: price
+  };
+  return props;
 }
 
 function resetCurrentSelectedSize() {
@@ -104,14 +115,4 @@ function orderButton() {
       }
     );
   });
-}
-
-function orderProps(props) {
-  var size = props.find(".price-button-size").text();
-  var price = props.find(".price-button-amount").text();
-  var props = {
-    size: size,
-    price: price
-  };
-  return props;
 }
