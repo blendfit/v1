@@ -7,6 +7,7 @@
   });
 
   changeOrderHref();
+  todaysMenuHomePage();
 
   openTextBox();
   // Mixpanel Events
@@ -41,6 +42,12 @@ function changeOrderButton(button) {
   animateButton($button.parent());
   // scroll to order button
   scrollToOrderButton();
+}
+
+function todaysMenuHomePage() {
+  $(".todays-menu-homepage").on("click", function() {
+    scrollToOrderButton();
+  });
 }
 
 function scrollToOrderButton() {
