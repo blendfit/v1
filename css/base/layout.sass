@@ -1,5 +1,6 @@
 @import 'spacing'
 @import 'typography'
+@import 'variables'
 
 body
   background: #FCFCFC
@@ -31,7 +32,7 @@ body
   margin: 4.8rem auto 4.8rem auto
   width: 70.68%
   border-radius: 0.5rem
-  font-size: 1.895rem
+  font-size: $header_font
   position: relative
   padding: 2rem 1.5rem
   color: #FFFFFF
@@ -62,18 +63,27 @@ body
   max-width: 320px
 
 .menu-header
-  width: 45.87%
-  font-size: 1.895rem
+  text-align: center
+  font-size: $header_font
+  letter-spacing: 3px
   text-align: center
   margin: 3.2rem auto 2.5px auto
   color: #616668
   max-width: 320px
 
+.menu-line-break
+  border-bottom: 2px solid #3EC9A7
+  border-radius: 2px
+  margin-top: .6rem
+  width: 48%
+  @extend .margin-auto
+  max-width: 200px
+
 .menu-subheader
   width: 47%
-  font-size: 1.422rem
+  font-size: $subheader_font
   text-align: center
-  margin: 0 auto 1.6rem auto
+  margin: 0.8rem auto 3.2rem auto
   color: #616668
   font-family: $proxima-light-italic
 
@@ -95,6 +105,11 @@ body
   display: block
   max-width: 700px
 
+.price-explanation
+  font-family: $proxima-light-italic
+  font-size: $subheader_font
+  margin-bottom: 1.6rem
+  
 .slick-dots
   bottom: -35px !important
   @media (max-width: 374px)
@@ -111,7 +126,7 @@ body
   width: 91.47%
   height: 65px
   border-radius: 0.5rem
-  font-size: 1.895rem
+  font-size: $header_font
   line-height: 65px
   text-align: center
   margin: 0 auto
@@ -246,7 +261,7 @@ body
 .select-size
   font-family: $proxima-bold
   letter-spacing: 0.5px
-  margin-bottom: 16px
+  margin-bottom: 0.4rem
   @media (max-width: 374px)
     font-size: 14px
 
