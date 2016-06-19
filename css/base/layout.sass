@@ -4,21 +4,36 @@
 
 body
   background: #FCFCFC
-
-.nav-items
-  list-style-type: none
-  margin: 0 auto
-
-.nav-logo
-  padding: 16px
-  text-align: center
-  border-bottom: .5px solid #D8D8D8
   
+// Nav Bar
+a
+  text-decoration: none
+  color: inherit
+
+.header
+  height: 55px
+  line-height: 55px
+  color: #616668
+  border-bottom: 0.5px solid #D8D8D8
+
 .header-logo
+  float: left
   width: 50%
   margin: 0 auto
   @media (min-width: 415px)
     max-width: 300px
+
+.header-logo-image
+  width: 90%
+  padding-left: 1.6rem
+  display: inline-block
+  height: 100%
+  vertical-align: middle
+
+.menu
+  float: right
+  font-size: $subheader_font
+  padding-right: 1.6rem
     
 .line-break
   border-bottom: 1px solid #D8D8D8
@@ -289,3 +304,53 @@ body
 
 *:focus
   outline: none
+
+// Product
+
+.product-explanation
+  width: 73%
+  font-size: $subheader_font
+  line-height: 22px
+  color: #616668
+  margin: 4.8rem auto 4.8rem auto
+
+.our-formula-header
+  text-align: center
+  font-size: $header_font
+  letter-spacing: 3px
+  text-align: center
+  color: #616668
+
+.our-formula-line-break
+  border-bottom: 2px solid #3EC9A7
+  border-radius: 2px
+  margin-top: .6rem
+  width: 48%
+  @extend .margin-auto
+  max-width: 200px
+
+.product-container
+  width: 260px
+  margin: 4.8rem auto 4.8rem auto
+
+.product-image
+  display: block
+  margin: 0 auto
+
+.product-title
+  font-size: $subheader_font
+  font-family: $proxima-bold
+  color: #616668
+  text-align: center
+  margin: 0.8rem auto 1.6rem auto
+
+.product-list
+  margin: 0
+  .product-list-item
+    font-size: $subheader_font
+    color: #616668
+    margin-top: 0.8rem
+
+.plus-sign
+  display: block
+  margin: 0 auto
