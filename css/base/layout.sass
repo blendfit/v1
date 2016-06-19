@@ -4,47 +4,53 @@
 body
   background: #FCFCFC
 
+.nav-items
+  list-style-type: none
+  margin: 0 auto
+
+.nav-logo
+  padding: 16px
+  text-align: center
+  border-bottom: .5px solid #D8D8D8
+  
 .header-logo
-  width: 45%
-  display: block
-  margin: 3.2rem auto 3.2rem auto
+  width: 50%
+  margin: 0 auto
   @media (min-width: 415px)
-    max-width: 220px
-
-.operation-hours
-  font-family: $proxima-light-italic
-  font-size: 1.422rem
-  text-align: center
-  color: #616668
-  margin: 1.6rem auto 3.2rem auto
-
-.nysc
-  font-size: 1.422rem
-  text-align: center
-  width: 69.6%
-  line-height: 2rem
-  margin: 0 auto 0 auto
-  color: #616668
-  @media (min-width: 415px)
-    font-size: 1.895rem
-  span
-    color: red
-    font-family: $proxima-bold
-
+    max-width: 300px
+    
 .line-break
   border-bottom: 1px solid #D8D8D8
   width: 35%
   @extend .margin-auto
   max-width: 200px
 
-.header-text
+.about-product-btn
+  display: block
+  text-decoration: none
+  margin: 4.8rem auto 4.8rem auto
+  width: 70.68%
+  border-radius: 0.5rem
   font-size: 1.895rem
+  position: relative
+  padding: 2rem 1.5rem
+  color: #FFFFFF
   text-align: center
-  width: 69.86%
-  line-height: 2.653rem
-  margin: 3.2rem auto 1.6rem auto
+  background-color: #3EC9A7
+  box-shadow: 0 0.15rem 0.05rem #2E947B
+  -webkit-box-shadow: 0 0.15rem 0.05rem #2E947B
+  max-width: 379px
+
+.header-text
+  font-size: 2.1rem
+  text-align: center
+  width: 90%
+  line-height: 3.08rem
+  margin: 4.8rem auto 4.8rem auto
   color: #616668
   max-width: 320px
+  span
+    color: #3EC9A7
 
 .header-subtext
   font-size: 1.422rem
@@ -81,9 +87,6 @@ body
   padding: 1.6rem 0 3.2rem 0
   border-radius: 0.5rem
   background: #FFF
-  // -webkit-box-shadow: 0 0 1px 0 #616668
-  // -moz-box-shadow:    0 0 1px 0 #616668
-  // box-shadow:         0 0 1px 0 #616668
 
 .menu-image
   position: relative !important
@@ -91,16 +94,6 @@ body
   margin: 0 auto
   display: block
   max-width: 700px
-  // -webkit-box-shadow: 0 0 1px #ccc
-  // -moz-box-shadow: 0 0 1px #ccc
-  // box-shadow: 0 0 1px #ccc
-  // @media (min-width: 380px)
-  //   width: 85%
-  // @media (max-width: 330px)
-  //   width: 88%
-  // @media (min-width: 410px)
-  //   width: 80%
-  //   max-width: 340px
 
 .slick-dots
   bottom: -35px !important
