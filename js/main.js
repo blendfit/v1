@@ -14,6 +14,7 @@
   pageView();
   orderButton();
   aboutProduct();
+  todaysMenuProduct();
 
   sizeButtonClick();
   resetCurrentSelectedSize();
@@ -113,6 +114,12 @@ function openTextBox() {
 function aboutProduct() {
   $(".about-product-btn").on("click", function() {
     mixpanel.track("About Product");
+  });
+}
+
+function todaysMenuProduct() {
+  $(".todays-menu-product-page").on("click", function() {
+    mixpanel.track("Today's Menu Product");
   });
 }
 
