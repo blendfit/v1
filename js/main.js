@@ -13,6 +13,7 @@
   // Mixpanel Events
   pageView();
   orderButton();
+  aboutProduct();
 
   sizeButtonClick();
   resetCurrentSelectedSize();
@@ -106,6 +107,12 @@ function openTextBox() {
   $(".order-button").click(function(){
     window.location = $(this).find("a").attr("href");
     return false;
+  });
+}
+
+function aboutProduct() {
+  $(".about-product-btn").on("click", function() {
+    mixpanel.track("About Product");
   });
 }
 
