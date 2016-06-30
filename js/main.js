@@ -83,11 +83,14 @@ function sizeButtonClick() {
 }
 
 function orderPropsMixpanel(props) {
+  var name = props.closest(".item").find(".item-title").text();
+  name = name.slice(3).toLowerCase();
   var size = props.find(".price-button-size").text();
   var price = props.find(".price-button-amount").text();
   var props = {
     size: size,
-    price: price
+    price: price,
+    name: name
   };
   return props;
 }
@@ -118,7 +121,8 @@ function orderButton() {
       "Order Shake",
       {
         "Size" : orderProps.size,
-        "Price" : orderProps.price
+        "Price" : orderProps.price,
+        "Name" : orderProps.name
       }
     );
   });
