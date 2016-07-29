@@ -1,4 +1,4 @@
-  $(document).ready(function(){
+$(document).ready(function(){
   $(".items").slick({
     centerMode: true,
     centerPadding: '30px',
@@ -32,7 +32,8 @@ function hrefText() {
 }
 
 function changeOrderHref() {
-  $(".order-button").find("a").attr('href', hrefText() + encodeURI("Order Small Shredder") );
+  var text = $(".price-button.initial").data().optionText;
+  $(".order-button").find("a").attr('href', hrefText() + encodeURI(text) );
 }
 
 function changeOrderButton(button) {
