@@ -52,7 +52,7 @@ function setupBackButton() {
 
 function setupOrderNow() {
   $(".order-now").click(function(){
-    window.location = $(this).find("a").attr("href");
+    window.location =$('.order-button').find("a").attr("href");
     return false;
   });
 }

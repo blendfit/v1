@@ -122,15 +122,15 @@ function pageView() {
   mixpanel.time_event("Order Shake");
 }
 
-function trackOrderButton() {
-  $(".order-button").on("click", function() {
-    mixpanel.track(
-      "Order Shake",
-      {
-        "Size" : orderProps.size,
-        "Price" : orderProps.price,
-        "Name" : orderProps.name
-      }
-    );
-  });
-}
+// function trackOrderButton() {
+//   $(".order-button").on("click", function() {
+//     mixpanel.track(
+//       "Order Shake",
+//       {
+//         "Size" : orderProps.size,
+//         "Price" : orderProps.price,
+//         "Name" : orderProps.name
+//       }
+//     );
+//   });
+// }
