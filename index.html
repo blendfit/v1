@@ -197,23 +197,39 @@
 
     <img class="square-image" src="images/square.png"/>
 
-    <div class="overlay-container">
+    <div class="overlay-container hidden">
       <div class="overlay-actions overlay-actions-top">
-        <img src="images/back.png" alt="back-button" />
-        <img src="images/close-button.png" alt="close-button" />
+        <img src="images/back.png" alt="back-button" class="overlay-back-button hidden"/>
+        <img src="images/close-button.png" alt="close-button" class="overlay-close-button hidden"/>
       </div>
-      <h3>Choose an option:</h3>
-      <div class="overlay-actions overlay-actions-bottom">
-        <div class="overlay-choice order-now">
-          <img src="images/fast-icon.png" alt="order-now" />
-          <p>Get it to me in 15 minutes!</p>
+
+      <div class="overlay-order-options hidden">
+        <h3>Choose an option:</h3>
+        <div class="overlay-actions overlay-actions-bottom">
+          <div class="overlay-choice order-now">
+            <img src="images/fast-icon.png" alt="order-now" />
+            <p>Get it to me in 15 minutes!</p>
+          </div>
+
+          <img src="images/or-divider.png" class="or-divider" alt="" />
+
+          <div class="overlay-choice order-later">
+            <img src="images/time-icon.png" alt="order-later" />
+            <p>Schedule for later today!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-later-module-container hidden">
+        <div class="schedule-later-module-top">
+          <p>Schedule for later today!</p>
+        </div>
+        <div class="schedule-later-module-bottom">
+          <input type="time" class="time-picker" name="time" value="15:58">
         </div>
 
-        <img src="images/or-divider.png" class="or-divider" alt="order-now" />
-
-        <div class="overlay-choice order-later">
-          <img src="images/time-icon.png" alt="order-later" />
-          <p>Schedule for later today!</p>
+        <div class="schedule-later-module-button">
+          <p>Schedule Order</p>
         </div>
       </div>
     </div>
@@ -234,5 +250,6 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
 mixpanel.init("1b7c6bfe54947389313f472651698995");</script><!-- end Mixpanel -->
 
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/overlay.js"></script>
   </body>
 </html>
