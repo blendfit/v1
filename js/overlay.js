@@ -17,7 +17,9 @@ function hideElement($element) {
 }
 
 function setupOpenOverlay() {
-  $(".order-button").click(function() {
+  $(".order-button").click(function(e) {
+    e.preventDefault();
+
     showElement( $('.overlay-container') );
     showElement( $('.overlay-order-options') );
     showElement( $('.overlay-close-button') );
