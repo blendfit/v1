@@ -9,10 +9,9 @@ $(document).ready(function(){
   changeOrderHref();
   todaysMenuHomePage();
 
-  openTextBox();
   // Mixpanel Events
   pageView();
-  orderButton();
+  // trackOrderButton();
   aboutProduct();
   todaysMenuProduct();
 
@@ -105,13 +104,6 @@ function resetCurrentSelectedSize() {
   });
 }
 
-function openTextBox() {
-  $(".order-button").click(function(){
-    window.location = $(this).find("a").attr("href");
-    return false;
-  });
-}
-
 function aboutProduct() {
   $(".about-product-btn").on("click", function() {
     mixpanel.track("About Product");
@@ -130,7 +122,7 @@ function pageView() {
   mixpanel.time_event("Order Shake");
 }
 
-function orderButton() {
+function trackOrderButton() {
   $(".order-button").on("click", function() {
     mixpanel.track(
       "Order Shake",
