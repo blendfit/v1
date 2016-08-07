@@ -39,6 +39,10 @@ function setupScheduleLaterModule() {
 
     showElement( $('.schedule-later-module-container') );
     showElement( $('.overlay-back-button ') );
+
+    window.setTimeout(function() {
+      $('.time-picker').trigger( "focus" );
+    }, 500);
   });
 }
 
