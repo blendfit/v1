@@ -7,8 +7,8 @@ $(document).ready(function(){
   });
 
   changeOrderHref();
-  todaysMenuHomePage();
-
+  tempDisplayEvent();
+  
   // Mixpanel Events
   pageView();
   // trackOrderButton();
@@ -46,8 +46,8 @@ function changeOrderButton(button) {
   scrollToOrderButton();
 }
 
-function todaysMenuHomePage() {
-  $(".todays-menu-homepage").on("click", function() {
+function tempDisplayEvent() {
+  $(".temp-display").on("click", function() {
     scrollToOrderButton();
   });
 }
