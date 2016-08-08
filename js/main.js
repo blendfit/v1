@@ -53,7 +53,7 @@ function tempDisplayEvent() {
 }
 
 function scrollToOrderButton() {
-  $(window).scrollTo('.items', {duration: 500});
+  $(window).scrollTo('.item-title', {duration: 500});
 }
 
 function animateButton($button) {
