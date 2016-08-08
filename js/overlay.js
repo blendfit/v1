@@ -77,7 +77,7 @@ function setupOrderLater() {
 function fillInDatePicker() {
   var minTime = new Date();
   minTime.setMinutes(minTime.getMinutes() + 15);
-  var formatedTime = minTime.toLocaleTimeString().replace(/:\d+ /, ' ');
+  var formatedTime = minTime.toLocaleTimeString().replace(/:\d+ /, ' ').replace(/\s*\(?EDT\)?/, '');
   $('.time-picker').val( formatedTime );
 }
 
