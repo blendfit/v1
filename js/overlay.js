@@ -44,7 +44,7 @@ function setupScheduleLaterModule() {
     showElement( $('.schedule-later-module-container') );
     showElement( $('.overlay-back-button ') );
 
-    $('.time-picker').trigger('focus');
+    $('.time-picker').mobiscroll('show');
   });
 }
 
