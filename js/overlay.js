@@ -6,6 +6,10 @@ $(document).ready(function(){
 
   setupOrderNow();
   setupOrderLater();
+
+  fillInDatePicker();
+
+  setupTimePicker();
 });
 
 function showElement($element) {
@@ -40,9 +44,7 @@ function setupScheduleLaterModule() {
     showElement( $('.schedule-later-module-container') );
     showElement( $('.overlay-back-button ') );
 
-    window.setTimeout(function() {
-      $('.time-picker').trigger( "focus" );
-    }, 500);
+    $('.time-picker').trigger('focus');
   });
 }
 
@@ -70,4 +72,31 @@ function setupOrderLater() {
     window.location = windowLocation;
     return false;
   });
+}
+
+function fillInDatePicker() {
+  var minTime = new Date();
+  minTime.setMinutes(minTime.getMinutes() + 15);
+  var formatedTime = minTime.toLocaleTimeString().match(/\d{2}:\d{2}|[AMP]+/g).join(' ')
+
+  $('.time-picker').val( formatedTime );
+}
+
+function setupTimePicker() {
+  var minTime = new Date();
+  minTime.setMinutes(minTime.getMinutes() + 15);
+  var maxTime = new Date(new Date().setHours(23, 00, 0, 0));
+
+  $('.time-picker').mobiscroll().time({
+     theme: 'mobiscroll',
+     display: 'bottom',
+     headerText: false,
+     maxWidth: 90,
+     showOnFocus: true,
+     min: minTime,
+     max: maxTime,
+     onSet: function (event, inst) {
+       showElement( $('.schedule-later-module-button') );
+     }
+ });
 }
