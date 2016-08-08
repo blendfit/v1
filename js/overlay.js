@@ -77,8 +77,7 @@ function setupOrderLater() {
 function fillInDatePicker() {
   var minTime = new Date();
   minTime.setMinutes(minTime.getMinutes() + 15);
-  var formatedTime = minTime.toLocaleTimeString().match(/\d{2}:\d{2}|[AMP]+/g).join(' ')
-
+  var formatedTime = minTime.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
   $('.time-picker').val( formatedTime );
 }
 
@@ -86,7 +85,7 @@ function setupTimePicker() {
   var minTime = new Date();
   minTime.setMinutes(minTime.getMinutes() + 15);
   var maxTime = new Date(new Date().setHours(23, 00, 0, 0));
-
+  
   $('.time-picker').mobiscroll().time({
      theme: 'mobiscroll',
      display: 'bottom',
