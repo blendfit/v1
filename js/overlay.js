@@ -102,15 +102,13 @@ function setupTimePicker() {
      max: maxTime,
      onSet: function (event, inst) {
        showElement( $('.schedule-later-module-button') );
+       mixpanel.track('Set Time', {
+         "Time Set" : event.valueText
+       });
      },
      buttons: ['set'],
      steps: {
        minute: 5
-     },
-     onSet: function(event, inst) {
-       mixpanel.track('Set Time', {
-         "Time Set" : event.valueText
-       });
      }
  });
 }
