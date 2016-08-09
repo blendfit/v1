@@ -45,6 +45,8 @@ function setupScheduleLaterModule() {
     showElement( $('.overlay-back-button ') );
 
     $('.time-picker').mobiscroll('show');
+
+    // $('.mbsc-fr-persp').height('500')
   });
 }
 
@@ -55,6 +57,8 @@ function setupBackButton() {
 
     showElement( $('.overlay-close-button') );
     showElement( $('.overlay-order-options') );
+
+    $('.time-picker').mobiscroll('hide');
   });
 }
 
@@ -85,7 +89,7 @@ function setupTimePicker() {
   var minTime = new Date();
   minTime.setMinutes(minTime.getMinutes() + 15);
   var maxTime = new Date(new Date().setHours(23, 00, 0, 0));
-  
+
   $('.time-picker').mobiscroll().time({
      theme: 'mobiscroll',
      display: 'bottom',
@@ -96,6 +100,7 @@ function setupTimePicker() {
      max: maxTime,
      onSet: function (event, inst) {
        showElement( $('.schedule-later-module-button') );
-     }
+     },
+     buttons: ['set']
  });
 }
