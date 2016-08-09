@@ -13,8 +13,7 @@ $(document).ready(function(){
   pageView();
   trackOrderButton();
   aboutProduct();
-  todaysMenuProduct();
-  sizeSelectionButton();
+  todaysMenuProduct();;
   trackOrderButton();
   trackOrderNow();
   trackOrderScheduled();
@@ -138,34 +137,17 @@ function pageView() {
   mixpanel.time_event("Order Shake");
 }
 
-// function trackOrderButton() {
-//   $(".order-button").on("click", function() {
-//     mixpanel.track(
-//       "Order Shake",
-//       {
-//         "Size" : orderProps.size,
-//         "Price" : orderProps.price,
-//         "Name" : orderProps.name
-//       }
-//     );
-//   });
-// }
-function sizeSelectionButton() {
-  $('.price-button').on('click', function() {
-    mixpanel.track('Size Selected', {
-      "Size" : orderProps.size,
-      "Price" : orderProps.price,
-      "Name" : orderProps.name,
-      "Time" : timeNow()
-    });
-  });
-}
-
 function trackOrderButton() {
-  $('.order-button').on('click', function() {
-    mixpanel.track('Order Button', {
-      "Time" : timeNow()
-    });
+  $(".order-button").on("click", function() {
+    mixpanel.track(
+      "Order Button",
+      {
+        "Size" : orderProps.size,
+        "Price" : orderProps.price,
+        "Name" : orderProps.name,
+        "Time" : timeNow()
+      }
+    );
   });
 }
 
