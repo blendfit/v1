@@ -20,6 +20,7 @@ $(document).ready(function(){
   trackCloseButton();
   trackBackButton();
   timePicker();
+  scheduleOrder();
 
   sizeButtonClick();
   resetCurrentSelectedSize();
@@ -161,7 +162,15 @@ function trackOrderNow() {
 
 function trackOrderScheduled() {
   $('.order-later').on('click', function() {
-    mixpanel.track('Scheduled Order', {
+    mixpanel.track('Setup Scheduled Order', {
+      "Time" : timeNow()
+    });
+  });
+}
+
+function scheduleOrder() {
+  $('.schedule-later-module-button').on('click', function() {
+    mixpanel.track('Schedule Order', {
       "Time" : timeNow()
     });
   });
