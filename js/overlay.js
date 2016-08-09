@@ -106,6 +106,11 @@ function setupTimePicker() {
      buttons: ['set'],
      steps: {
        minute: 5
+     },
+     onSet: function(event, inst) {
+       mixpanel.track('Set Time', {
+         "Time Set" : event.valueText
+       });
      }
  });
 }

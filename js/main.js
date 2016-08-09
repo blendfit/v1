@@ -11,14 +11,27 @@ $(document).ready(function(){
   
   // Mixpanel Events
   pageView();
-  // trackOrderButton();
+  trackOrderButton();
   aboutProduct();
   todaysMenuProduct();
+  sizeSelectionButton();
+  trackOrderButton();
+  trackOrderNow();
+  trackOrderScheduled();
+  trackCloseButton();
+  trackBackButton();
+  timePicker();
 
   sizeButtonClick();
   resetCurrentSelectedSize();
 });
 
+
+function timeNow() {
+  var timeNow = new Date(Date.now());
+  timeNow = timeNow.toLocaleTimeString();
+  return timeNow
+}
 function hrefText() {
   var agent = navigator.userAgent.toLowerCase();
   if ( agent.search('iphone') > 0 ) {
@@ -49,6 +62,9 @@ function changeOrderButton(button) {
 function tempDisplayEvent() {
   $(".temp-display").on("click", function() {
     scrollToOrderButton();
+    mixpanel.track("New Feature Banner", {
+      'Time': timeNow()
+    });
   });
 }
 
@@ -134,3 +150,61 @@ function pageView() {
 //     );
 //   });
 // }
+function sizeSelectionButton() {
+  $('.price-button').on('click', function() {
+    mixpanel.track('Size Selected', {
+      "Size" : orderProps.size,
+      "Price" : orderProps.price,
+      "Name" : orderProps.name,
+      "Time" : timeNow()
+    });
+  });
+}
+
+function trackOrderButton() {
+  $('.order-button').on('click', function() {
+    mixpanel.track('Order Button', {
+      "Time" : timeNow()
+    });
+  });
+}
+
+function trackOrderNow() {
+  $('.order-now').on('click', function() {
+    mixpanel.track('Instant Order', {
+      "Time" : timeNow()
+    });
+  });
+}
+
+function trackOrderScheduled() {
+  $('.order-later').on('click', function() {
+    mixpanel.track('Scheduled Order', {
+      "Time" : timeNow()
+    });
+  });
+}
+
+function trackCloseButton() {
+  $('.close-button').on('click', function() {
+    mixpanel.track('Close Options Overlay', {
+      "Time" : timeNow()
+    });
+  });
+}
+
+function trackBackButton() {
+  $('.overlay-back-button').on('click', function() {
+    mixpanel.track('Back To Options Overlay', {
+      "Time" : timeNow()
+    });
+  })
+}
+
+function timePicker() {
+  $('.time-picker').on('click', function() {
+    mixpanel.track('Time Picker', {
+      "Time" : timeNow()
+    });
+  });
+}
