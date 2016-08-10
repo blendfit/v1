@@ -81,15 +81,14 @@ function setupOrderLater() {
 function fillInDatePicker() {
   var minTime = new Date();
   minTime.setMinutes(Math.ceil(minTime.getMinutes()/5) * 5 + 15)
-  // minTime.setMinutes(minTime.getMinutes() + 15);
   var formatedTime = minTime.toLocaleTimeString().replace(/:\d+ /, ' ');
+
   $('.time-picker').val( formatedTime );
 }
 
 function setupTimePicker() {
   var minTime = new Date();
   minTime.setMinutes(Math.ceil(minTime.getMinutes()/5) * 5 + 15)
-  // minTime.setMinutes(minTime.getMinutes() + 15);
   var maxTime = new Date(new Date().setHours(23, 00, 0, 0));
 
   $('.time-picker').mobiscroll().time({

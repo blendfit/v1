@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   changeOrderHref();
   tempDisplayEvent();
-  
+
   // Mixpanel Events
   pageView();
   trackOrderButton();
@@ -87,7 +87,7 @@ function selectButton(button) {
   $(button).addClass("selected");
 }
 
-var orderProps;
+var orderProps = { size: 'small', price: '7.50', name: 'slimmer'};
 
 function sizeButtonClick() {
   $(".price-button").on("click", function() {
