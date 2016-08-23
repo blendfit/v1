@@ -341,11 +341,55 @@ a
   margin: 0 auto
 
 
+// NEW DESIGN
 
-
-
-.new-design
+body.new-design
+  width: 100%
+  box-sizing: border-box
   color: white
-  background: pink
-  input[type="email"]
-    color: black
+
+  .new-design-landing-page
+    width: 100%
+    height: 500px
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/spark-background.jpg)
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: cover
+    background-color: rgba(0, 0, 0, 0.5)
+
+    header
+      padding: 20px
+
+    .new-design-landing-page-mid-section
+      text-align: center
+
+      .spark-logo
+        margin-top: 50px
+
+      .spark-tag-line
+        padding: 10px 30px
+        font-family: $avenir-light
+        font-size: 18px
+        line-height: 1.6
+
+      .new-design-landing-page-mid-section-footer
+        padding: 0px 20px
+        box-sizing: inherit
+        margin-top: 50px
+
+        .spark-learn-more-button
+          color: black
+          height: 50px
+          width: 100%
+          border: 0
+          border-radius: 3px
+          background: $spark-yellow
+          font-family: $avenir-heavy
+          letter-spacing: 1px
+          font-size: 12px
+
+        p
+          font-size: 9px
+          letter-spacing: 1.8px
+          margin-top: 20px
+          font-family: $avenir-light
