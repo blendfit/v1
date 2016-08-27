@@ -10,34 +10,34 @@ $( document ).ready( function(){
   //   }
   // );
 
-  // $(".new-design-landing-page").css("height", $(window).height() + "px");
+  $(".new-design-landing-page").css("height", $(window).height() + "px");
 
-  var $stickyButton = $(".spark-learn-more-sticky-button"),
-      $button = $(".spark-learn-more-button"),
-      $page = $(".new-design-landing-page"),
-      scrollingInterval = setInterval(scrollingStuff, 1),
-      lastScrollTop = 0;
-
-  function scrollingStuff() {
-    var st = $(this).scrollTop();
-
-     if ( st > lastScrollTop ){
-         // downscroll code
-
-         if( $page.height() < (lastScrollTop + 100) ) {
-           $button.addClass('new-design-sticky');
-         }
-     } else {
-        // upscroll code
-        if( $page.height() > (lastScrollTop + 100) ) {
-          $button.removeClass('new-design-sticky');
-        }
-     }
-
-     lastScrollTop = st;
-  }
-
-  window.onbeforeunload = function(e) {
-    clearInterval(scrollingInterval);
-  };
+  // var $stickyButton = $(".spark-learn-more-sticky-button"),
+  //     $button = $(".spark-learn-more-button"),
+  //     $page = $(".new-design-landing-page"),
+  //     scrollingInterval = setInterval(scrollingStuff, 1),
+  //     lastScrollTop = 0;
+  //
+  // function scrollingStuff() {
+  //   var st = $(this).scrollTop();
+  //
+  //    if ( st > lastScrollTop ){
+  //        // downscroll code
+  //
+  //        if( $page.height() < (lastScrollTop + 100) ) {
+  //          $button.addClass('new-design-sticky');
+  //        }
+  //    } else {
+  //       // upscroll code
+  //       if( $page.height() > (lastScrollTop + 100) ) {
+  //         $button.removeClass('new-design-sticky');
+  //       }
+  //    }
+  //
+  //    lastScrollTop = st;
+  // }
+  //
+  // window.onbeforeunload = function(e) {
+  //   clearInterval(scrollingInterval);
+  // };
 });
