@@ -346,7 +346,7 @@ a
 body.new-design
   width: 100%
   box-sizing: border-box
-  color: white
+  color: $spark-white
   height: 100%
 
   .new-design-landing-page
@@ -379,7 +379,7 @@ body.new-design
         margin-top: 50px
 
         .spark-learn-more-button
-          color: black
+          color: $spark-black
           height: 50px
           width: 100%
           border: 0
@@ -402,18 +402,19 @@ body.new-design
   .new-design-mission-page
     padding: 25px
     text-align: center
+    background: $spark-off-white
     h3
       display: inline-block
       margin-top: 5px
       margin-bottom: 0
       padding: 0 5px
-      background: black
+      background: $spark-black
       font-family: $avenir-heavy
       font-size: 14px
       letter-spacing: 1px
       line-height: 1.8
     p
-      color: black
+      color: $spark-black
       font-size: 16px
       text-align: left
       font-family: $avenir-light
@@ -424,7 +425,7 @@ body.new-design
         border-bottom: 2px solid $spark-yellow
 
   .new-design-ingredients-page
-    background: black
+    background: $spark-black
     padding: 30px 5px
     header
       text-align: center
@@ -435,12 +436,12 @@ body.new-design
         margin-bottom: 0
         padding: 0 5px
         background: $spark-yellow
-        color: black
+        color: $spark-black
         font-size: 16px
         font-family: $avenir-heavy
     .new-design-indredients-card
       background: $spark-yellow
-      color: black
+      color: $spark-black
       text-align: center
       border-radius: 4px
       padding: 20px 5px
@@ -476,17 +477,17 @@ body.new-design
         hr
            border: 0
            height: 1px
-           background: black
+           background: $spark-black
       .ingredient-card-nutritional-facts
         display: flex
         justify-content: space-between
         padding: 0 5px
         .ingredient-card-nutritional-fact
-          border: 2px solid black
+          border: 2px solid $spark-black
           width: 45%
           .ingredient-card-nutritional-fact-top
             background: black
-            color: white
+            color: $spark-white
             text-align: center
             margin: 0
             font-family: $avenir-light
@@ -496,3 +497,49 @@ body.new-design
             font-family: $avenir-heavy
             font-size: 14px
             margin: 5px 0
+
+  .new-design-how-to-page
+    background: $spark-off-white
+    color: $spark-black
+    text-align: center
+    padding: 30px 10px
+    p
+      font-size: 18px
+      line-height: 1.6
+      font-family: $avenir-medium
+    h2
+      background: $spark-yellow
+      display: inline-block
+      padding: 3px 10px
+      font-size: 24px
+      font-family: $avenir-black
+      letter-spacing: 2px
+      margin-top: 5px
+    .how-to-card
+      background: $spark-white
+      padding-bottom: 15px
+      border-radius: 2px
+      margin-top: 35px
+      &.first-card
+        margin-top: 50px
+      img
+        margin-top: -25px
+      h4
+        margin-top: 10px
+        font-family: $avenir-medium
+        font-size: 18px
+        display: inline-block
+        border-bottom: 2px solid $spark-yellow
+      p
+        font-family: $avenir-light
+        font-size: 16px
+        line-height: 1.5
+        margin: 0
+        padding: 0 15px
+        text-align: left
+
+    .vertical-break-line
+      width: 3px
+      height: 50px
+      background: $spark-black
+      margin: 10px auto
