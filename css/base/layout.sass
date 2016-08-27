@@ -352,7 +352,7 @@ body.new-design
   .new-design-landing-page
     width: 100%
     height: 100%
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/spark-background.jpg)
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/spark-background-2.jpg)
     background-repeat: no-repeat
     background-position: center top
     background-size: cover
@@ -365,35 +365,42 @@ body.new-design
       text-align: center
 
       .spark-logo
-        margin-top: 50px
+        margin-bottom: 10%
 
-      .spark-tag-line
-        padding: 10px 30px
+      p
+        display: inline-block
+        margin: 2px 0
         font-family: $avenir-light
         font-size: 18px
         line-height: 1.6
+        padding: 2px 10px
+        background-color: rgba(0, 0, 0, 0.5)
+        -webkit-backdrop-filter: blur(4px)
+        backdrop-filter: blur(4px)
 
-      .new-design-landing-page-mid-section-footer
-        padding: 0px 20px
-        box-sizing: inherit
-        margin-top: 50px
+    .new-design-landing-page-mid-section-footer
+      box-sizing: inherit
+      position: absolute
+      bottom: 0px
+      width: 100%
+      text-align: center
 
-        .spark-learn-more-button
-          color: $spark-black
-          height: 50px
-          width: 100%
-          border: 0
-          border-radius: 3px
-          background: $spark-yellow
-          font-family: $avenir-heavy
-          letter-spacing: 1px
-          font-size: 12px
+      .spark-learn-more-button
+        color: $spark-black
+        height: 50px
+        width: 95%
+        border: 0
+        border-radius: 3px
+        background: $spark-yellow
+        font-family: $avenir-heavy
+        letter-spacing: 1px
+        font-size: 12px
 
-        p
-          font-size: 9px
-          letter-spacing: 1.8px
-          margin-top: 20px
-          font-family: $avenir-light
+      p
+        font-size: 10px
+        letter-spacing: 1.8px
+        margin-top: 20px
+        font-family: $avenir-heavy
 
     .sticky-wrapper
       button
@@ -543,3 +550,11 @@ body.new-design
       height: 50px
       background: $spark-black
       margin: 10px auto
+
+@media only screen and (min-device-width : $iphone-5-min) and (max-device-width : $iphone-5-max)
+    .spark-logo
+      margin-top: 10px
+
+@media only screen and (min-device-width : $iphone-6-min) and (max-device-width : $iphone-6-max)
+  .spark-logo
+    margin-top: 50px
