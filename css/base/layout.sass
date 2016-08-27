@@ -349,20 +349,6 @@ body.new-design
   box-sizing: border-box
   color: $spark-white
 
-  .spark-learn-more-sticky-button
-    z-index: 10000000
-    color: $spark-black
-    border: 0
-    background: $spark-yellow
-    font-family: $avenir-heavy
-    letter-spacing: 1px
-    font-size: 12px
-    height: 50px
-    width: 100%
-    position: fixed
-    top: 0
-    left: 0
-
   .new-design-landing-page
     width: 100%
     height: calc(100vh - 64px)
@@ -565,13 +551,14 @@ body.new-design
       background: $spark-black
       margin: 10px auto
 
-.hidden
-  display: none
-// .new-design-sticky
-//   position: fixed
-//   top: 0
-//   left: 0
-//   width: 100%
+.new-design-sticky
+  z-index: 10000000
+  position: fixed
+  top: 0
+  left: 0
+  border: 0
+  width: 100% !important
+
 
 @media only screen and (min-device-width : $iphone-5-min) and (max-device-width : $iphone-5-max)
     .spark-logo

@@ -15,27 +15,29 @@ $( document ).ready( function(){
   var $stickyButton = $(".spark-learn-more-sticky-button"),
       $button = $(".spark-learn-more-button"),
       $page = $(".new-design-landing-page"),
+      scrollingInterval = setInterval(scrollingStuff, 1),
       lastScrollTop = 0;
 
-  $(window).on("scroll", function(e) {
+  function scrollingStuff() {
     var st = $(this).scrollTop();
+
      if ( st > lastScrollTop ){
          // downscroll code
 
          if( $page.height() < (lastScrollTop + 100) ) {
-           $button.addClass('hidden');
-           $stickyButton.removeClass('hidden');
+           $button.addClass('new-design-sticky');
          }
      } else {
         // upscroll code
         if( $page.height() > (lastScrollTop + 100) ) {
-          $button.removeClass('hidden');
-          $stickyButton.addClass('hidden');
+          $button.removeClass('new-design-sticky');
         }
      }
 
      lastScrollTop = st;
-  });
+  }
 
-
+  window.onbeforeunload = function(e) {
+    clearInterval(scrollingInterval);
+  };
 });
