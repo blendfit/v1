@@ -347,11 +347,11 @@ body.new-design
   width: 100%
   box-sizing: border-box
   color: white
-  height: 2000px
+  height: 100%
 
   .new-design-landing-page
     width: 100%
-    height: 500px
+    height: 100%
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/spark-background.jpg)
     background-repeat: no-repeat
     background-position: center top
@@ -398,3 +398,100 @@ body.new-design
     .sticky-wrapper
       button
         left: 20px
+
+  .new-design-mission-page
+    padding: 25px
+    text-align: center
+    h3
+      display: inline-block
+      margin-top: 5px
+      margin-bottom: 0
+      padding: 0 5px
+      background: black
+      font-family: $avenir-heavy
+      font-size: 14px
+      letter-spacing: 1px
+      line-height: 1.8
+    p
+      color: black
+      font-size: 16px
+      text-align: left
+      font-family: $avenir-light
+      line-height: 1.5
+
+      .emphasize
+        font-family: $avenir-heavy
+        border-bottom: 2px solid $spark-yellow
+
+  .new-design-ingredients-page
+    background: black
+    padding: 30px 5px
+    header
+      text-align: center
+      padding: 0 15px 20px 15px
+      h2
+        display: inline-block
+        margin-top: 5px
+        margin-bottom: 0
+        padding: 0 5px
+        background: $spark-yellow
+        color: black
+        font-size: 16px
+        font-family: $avenir-heavy
+    .new-design-indredients-card
+      background: $spark-yellow
+      color: black
+      text-align: center
+      border-radius: 4px
+      padding: 20px 5px
+      margin-top: 10px
+      h2
+        margin-top: 20px
+        font-size: 40px
+        line-height: 1.1
+        font-family: $avenir-black
+      h3
+        font-size: 24px
+        font-family: $avenir-black
+        margin: 10px 0
+      p
+        text-align: left
+        font-size: 16px
+        font-family: $avenir-light
+        padding: 5px
+      .ingredient-card-images-container
+        height: 200px
+        position: relative
+        img:first-child
+          position: absolute
+          left: 5px
+          bottom: 20px
+          z-index: 10000
+        img:last-child
+          position: absolute
+          right: 5px
+      .ingredient-card-break-line-container
+        padding: 30px 100px
+        hr
+           border: 0
+           height: 1px
+           background: black
+      .ingredient-card-nutritional-facts
+        display: flex
+        justify-content: space-between
+        padding: 0 5px
+        .ingredient-card-nutritional-fact
+          border: 2px solid black
+          width: 130px
+          .ingredient-card-nutritional-fact-top
+            background: black
+            color: white
+            text-align: center
+            margin: 0
+            font-family: $avenir-light
+            font-size: 14px
+          .ingredient-card-nutritional-fact-bottom
+            text-align: center
+            font-family: $avenir-heavy
+            font-size: 14px
+            margin: 5px 0
