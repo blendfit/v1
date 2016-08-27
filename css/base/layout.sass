@@ -344,14 +344,28 @@ a
 // NEW DESIGN
 
 body.new-design
-  width: 100%
+  width: 100vw
+  height: 100%
   box-sizing: border-box
   color: $spark-white
-  height: 100%
+
+  .spark-learn-more-sticky-button
+    z-index: 10000000
+    color: $spark-black
+    border: 0
+    background: $spark-yellow
+    font-family: $avenir-heavy
+    letter-spacing: 1px
+    font-size: 12px
+    height: 50px
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
 
   .new-design-landing-page
     width: 100%
-    height: 100%
+    height: calc(100vh - 64px)
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/spark-background-2.jpg)
     background-repeat: no-repeat
     background-position: center top
@@ -550,6 +564,14 @@ body.new-design
       height: 50px
       background: $spark-black
       margin: 10px auto
+
+.hidden
+  display: none
+// .new-design-sticky
+//   position: fixed
+//   top: 0
+//   left: 0
+//   width: 100%
 
 @media only screen and (min-device-width : $iphone-5-min) and (max-device-width : $iphone-5-max)
     .spark-logo
