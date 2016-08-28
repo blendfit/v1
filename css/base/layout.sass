@@ -354,6 +354,12 @@ body.new-design
   text-align: center
   background-image: linear-gradient(to bottom, #f8e71c, #fdcd33)
 
+  .sticky-nav
+    z-index: 100000
+    position: fixed
+    height: 60px
+    width: 100%
+
   .new-design-landing-page
     width: 100%
     // height: calc(100vh - 64px)
@@ -560,8 +566,14 @@ body.new-design
 //   left: 0
 //   border: 0
 //   width: 100% !important
-//
-//
+
+.hidden
+  display: none
+
+.filled-in
+  background: $spark-yellow
+
+
 @media only screen and (min-device-width : $iphone-5-min) and (max-device-width : $iphone-5-max)
   .new-design-landing-page
     .spark-logo

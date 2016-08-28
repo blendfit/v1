@@ -12,32 +12,31 @@ $( document ).ready( function(){
 
   $(".new-design-landing-page").css("height", $(window).height() + "px");
 
-  // var $stickyButton = $(".spark-learn-more-sticky-button"),
-  //     $button = $(".spark-learn-more-button"),
-  //     $page = $(".new-design-landing-page"),
-  //     scrollingInterval = setInterval(scrollingStuff, 1),
-  //     lastScrollTop = 0;
-  //
-  // function scrollingStuff() {
-  //   var st = $(this).scrollTop();
-  //
-  //    if ( st > lastScrollTop ){
-  //        // downscroll code
-  //
-  //        if( $page.height() < (lastScrollTop + 100) ) {
-  //          $button.addClass('new-design-sticky');
-  //        }
-  //    } else {
-  //       // upscroll code
-  //       if( $page.height() > (lastScrollTop + 100) ) {
-  //         $button.removeClass('new-design-sticky');
-  //       }
-  //    }
-  //
-  //    lastScrollTop = st;
-  // }
-  //
-  // window.onbeforeunload = function(e) {
-  //   clearInterval(scrollingInterval);
-  // };
+  var $nav = $(".sticky-nav"),
+      $stickyText = $(".sticky-text"),
+      $page = $(".new-design-landing-page"),
+      lastScrollTop = 0;
+
+  $(window).on("scroll", function(e) {
+    var st = $(this).scrollTop();
+     if ( st > lastScrollTop ){
+         // downscroll code
+
+         if( $page.height() < (lastScrollTop) ) {
+           $nav.addClass('filled-in');
+           $stickyText.removeClass('hidden');
+           $stickyText.addClass('animated slideInDown')
+         }
+     } else {
+        // upscroll code
+        if( $page.height() > (lastScrollTop) ) {
+          $nav.removeClass('filled-in');
+          $stickyText.addClass('hidden');
+        }
+     }
+
+     lastScrollTop = st;
+  });
+
+
 });
