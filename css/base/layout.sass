@@ -352,6 +352,7 @@ body.new-design
   box-sizing: border-box
   color: $spark-black
   text-align: center
+  background-image: linear-gradient(to bottom, #f8e71c, #fdcd33)
 
   .new-design-landing-page
     width: 100%
@@ -390,46 +391,47 @@ body.new-design
 
   .new-design-mission-page
     background: $spark-off-white
-    padding: 20px
     text-align: left
-    h3
-      font-size: 34px
-      line-height: 1.3
-      font-family: $avenir-black
-      margin: 0
-    p
-      color: $spark-black
-      font-size: 16px
-      text-align: left
-      font-family: $avenir-light
-      line-height: 1.5
-
-      .emphasize
-        font-family: $avenir-heavy
-        border-bottom: 2px solid $spark-yellow
-
-  .new-design-ingredients-page
-    background: $spark-black
-    padding: 30px 5px
-    header
-      text-align: center
-      padding: 0 15px 20px 15px
-      h2
+    .mission-statement
+      padding: 20px
+      h3
         display: inline-block
-        margin-top: 5px
-        margin-bottom: 0
-        padding: 0 5px
-        background: $spark-yellow
+        font-size: 30px
+        font-family: $avenir-heavy
+        margin: 0
+        padding: 0
+        border-bottom: 3px solid $spark-orange
+        letter-spacing: -1px
+      p
         color: $spark-black
         font-size: 16px
+        text-align: left
+        font-family: $avenir-light
+        line-height: 1.5
+        .bold
+          font-family: $avenir-heavy
+    img
+      width: 100%
+
+  .new-design-ingredients-page
+    margin-top: -3px
+    header
+      background: $spark-black
+      padding: 30px 0
+      h2
+        display: inline-block
+        color: $spark-white
+        font-size: 30px
         font-family: $avenir-heavy
+        border-bottom: 3px solid $spark-yellow
+
     .new-design-indredients-card
-      background: $spark-yellow
       color: $spark-black
       text-align: center
-      border-radius: 4px
       padding: 20px 5px
       margin-top: 10px
+      &:not(.not-borded)
+        border-top: 4px solid $spark-black
       h2
         margin-top: 20px
         font-size: 40px
