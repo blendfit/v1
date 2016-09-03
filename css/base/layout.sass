@@ -579,11 +579,15 @@ body.new-design
       margin-top: 40px
       font-size: 12px
       letter-spacing: 1px
-      display: flex
-      align-items: center
-      justify-content: center
-      img
-        margin-right: 10px
+      div
+        display: -webkit-flex
+        display: flex
+        -webkit-justify-content: center
+        justify-content: center
+        -webkit-align-items: center
+        align-items: center
+        img
+          margin-right: 10px
 
   .new-design-footer
     background: $spark-black
@@ -647,7 +651,6 @@ body.new-design
       margin: 0
     button
       margin-top: 5px
-      display: block
       background: $spark-yellow
       color: $spark-black
       border: 0
@@ -656,12 +659,19 @@ body.new-design
       height: 50px
       font-size: 12px
       letter-spacing: 1px
-      display: flex
-      align-items: center
-      justify-content: center
-      font-family: $avenir-heavy
-      img
-        margin-right: 10px
+      div
+        display: -webkit-flex
+        display: flex
+        -webkit-justify-content: center
+        justify-content: center
+        -webkit-align-items: center
+        align-items: center
+        font-family: $avenir-heavy
+        img
+          display: inline-block
+          margin-right: 10px
+        h3
+          display: inline-block
 
 
 @media only screen and (min-device-width : $iphone-5-min) and (max-device-width : $iphone-5-max)
