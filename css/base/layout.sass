@@ -659,6 +659,9 @@ body.new-design
       height: 50px
       font-size: 12px
       letter-spacing: 1px
+      -webkit-animation-name: yellowPulse
+      -webkit-animation-duration: 2s
+      -webkit-animation-iteration-count: infinite
       div
         display: -webkit-flex
         display: flex
@@ -673,6 +676,17 @@ body.new-design
         h3
           display: inline-block
 
+
+@-webkit-keyframes yellowPulse
+  from
+    background-color: $spark-yellow
+    -webkit-box-shadow: 0 0 9px $spark-yellow
+  50%
+    background-color: $spark-dark-yellow
+    -webkit-box-shadow: 0 0 18px $spark-dark-yellow
+  to
+    background-color: $spark-yellow
+    -webkit-box-shadow: 0 0 9px $spark-yellow
 
 @media only screen and (min-device-width : $iphone-5-min) and (max-device-width : $iphone-5-max)
   .new-design-landing-page
