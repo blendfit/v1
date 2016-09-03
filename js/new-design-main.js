@@ -12,10 +12,10 @@ $( document ).ready( function(){
 
   $(".new-design-landing-page").css("height", $(window).height() + "px");
 
-  var $nav = $(".sticky-nav"),
-      $stickyText = $(".sticky-text"),
+  var lastScrollTop = 0,
+      $nav = $(".sticky-nav"),
       $page = $(".new-design-landing-page"),
-      lastScrollTop = 0;
+      $stickyNavContainer = $(".sticky-nav-container");
 
   $(window).on("scroll", function(e) {
     var st = $(this).scrollTop();
@@ -24,14 +24,14 @@ $( document ).ready( function(){
 
          if( $page.height() < (lastScrollTop) ) {
            $nav.addClass('filled-in');
-           $stickyText.removeClass('hidden');
-           $stickyText.addClass('animated slideInDown')
+           $stickyNavContainer.removeClass('hidden');
+          //  $stickyNavContainer.addClass('animated slideInDown');
          }
      } else {
         // upscroll code
         if( $page.height() > (lastScrollTop) ) {
           $nav.removeClass('filled-in');
-          $stickyText.addClass('hidden');
+          $stickyNavContainer.addClass('hidden');
         }
      }
 
