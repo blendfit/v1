@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  findOutMoreScroll();
   $(".new-design-landing-page").css("height", $(window).height() + "px");
   
   var lastScrollTop = 0,
@@ -28,3 +28,11 @@ $(document).ready(function(){
   });
   
 });
+
+function findOutMoreScroll(){
+  $('.new-design-landing-page-footer').on('click', function(){
+    $('html, body').animate({
+      scrollTop: $('.mission-statement').offset().top
+    }, 2000)
+  });
+}
